@@ -24,7 +24,6 @@
 14-4-xp32-64-dd-ccc-pack2.exe	mirror	b72542f2666cea514566b3644ae0d8d7612723bc	015149eb57e927ecc8f2431a717132d69ff9fecbcb9cd66fd5e4f26d43191438	Catalyst 14.4 pack2; display INF byte-identical to the vendor copy
 14-4-xp32-64-dd-ccc-pack3.exe	mirror	cff3995f367c57443f1c831828de5f04d71cfa7d	d081568289128b704b8f902d675cd85c767fd617111a524080784a145a0fb6b8	Catalyst 14.4 pack3, the only stock GFX7 x64 driver
 9-3_xp64_dd_ccc_enu.exe	mirror	ff419542a47c51fa8f91aa9c2db5d1d91c8d3f31	046c43d096428b34d45725ebeacab5378a04b0990f30819a73aff38065045d84	Catalyst 9.3 x64, closes the early end of the lineage
-icafe-winxp-9.00.300.3010-beta1-br294594-sep24.exe	mirror	62c5ae5ba8a776ec6392fb58da3bccd885faeb37	97a63ffb39d0ad6730304225e7967fdef972220e99264680ea88d400262ac03b	iCafe 3010 beta, 32-bit only; internal name shows br294594-sep24
 icafe-100.50-xp64-9.00.300.3005.exe	wayback		dfd2d3ee994300a6442c3a3fc4c9380dd91ce417eea41e4eeae119b9b9fb4375	iCafe 100.50; richest GFX7 donor at 17 ids; AMD's own file at www2.ati.com/drivers/windows-xp-amd-catalyst-9.00.300.3005-dec9.exe, captured 20150525015957 and 20150510011138, byte-identical, refetched and reverified after a reboot lost the scratch tree
 14-4-win7-win8-win8.1-64-dd-ccc-whql.exe	operator		e99b480c9f84db095e43c48c8ca307b16aa9244118e1ee4c222f8414ec0ba6b2	Catalyst 14.4 desktop Win7/8/8.1 x64; the donor package (WB_INF/B171094)
 14-4-win7-win8-win8.1-32-dd-ccc-whql.exe	operator		902d6ac52d943676740d73e6e4c918186f87f36f7c9866268ac1429a54634eba	Catalyst 14.4 desktop Win7/8/8.1 x32 sibling
