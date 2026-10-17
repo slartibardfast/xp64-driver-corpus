@@ -1,0 +1,53 @@
+# Corpus manifest for the Windows XP x64 driver work.
+#
+# Every row was downloaded and inspected on 2026-10-03, then recorded by hash. A
+# rebuild of this tree is only trustworthy if each refetched file matches the value
+# here, so the fetch script verifies rather than assumes. The infohash column is the
+# durable half: it identifies the payload without naming a server, so it still proves
+# what was held after an origin moves the file or disappears.
+#
+# source   mirror  = https://radeon.ru/drivers/amd/xp/<name>.exe serves metainfo;
+#                    the payload comes from the open tracker files.radeon.ru.
+#          archive  = https://archive.org/download/<item>/<file>
+#          wayback  = archive.org snapshot, captured twice, byte-identical
+#          operator = delivered locally by the operator 2026-10-17; no public
+#                    source remains (www2.ati.com never archived a body, the
+#                    live mirrors deleted it, the Update Catalog purged the
+#                    era). Provenance: rig fixtures/graft/donor-smc-win7-14.4.provenance.md.
+# infohash blank where the artifact did not come from a torrent.
+# re-fetch: every driver row is downloadable from this repository's corpus-v1 release
+# asset, then verified against the sha256 column (tools/fetch-all.sh).
+# ISO rows are deliberately absent: Microsoft media stays off GitHub and
+# lives only on the acquisition machine (~/xp64-corpus/iso, hash recorded
+# in the local corpus manifest).
+#
+# name<TAB>source<TAB>infohash<TAB>sha256<TAB>note
+10-2_legacy_xp32-64_dd_ccc.exe	mirror	aaa1a2773f37ec05bfe567f69d17df2c14453604	c7bcb8c02579314f2bc5b38337141574faf2b21f0ed4e99e4d278fd438b2ef43	Catalyst 10.2 legacy, multi-arch
+12-4_xp64_dd_ccc.exe	mirror	9fe44a04078b12aed58e35a1af5260cd3b1b7ae4	9499d5077f528b955ab1d8621a7d830fbbb2d753e9f2e0b8c3bc58f6319843a6	Catalyst 12.4 x64
+12-4_agp-hotfix_xp64_dd_ccc.exe	mirror	d48fd4709b8b816fd52b376fc9e24c7c182b051b	62e8ab83c690faf76054feba756145cef25275c8b6cfcea64f19e4a40ec23d33	Catalyst 12.4 AGP hotfix x64
+12-6-legacy_xp64_dd_ccc_whql.exe	mirror	662858d84fa48c6933dfad34c257d87ddbcbbd92	edd038231c1e5753cfc583a12cebd3504196f13e2ee69b85db3b48b4181d2aed	Catalyst 12.6 legacy x64
+12-8_xp64_dd_ccc.exe	mirror	46be7a105fe017edbec1dd274f9a8119d23bc632	595f9fa318e59561af101acf44986239f778c315239ed2fbab537e8d8ef26208	Catalyst 12.8 x64
+13-9_xp64_dd_ccc_whql.exe	mirror	73c2ae614ed58ae01f851ad3fe6c75fd2e3c577f	ee0994d03be174b2051cb489558f4aec91e9b9b3b771009395ff9d08c5870f6f	Catalyst 13.9 x64, last before the line froze
+14-4-xp32-64-dd-ccc-pack1.exe	mirror	bffe8b94b757f3d2a048fed05ef84ce90f68abc5	76f8b5db65d36c8da84111fd55301f6dfb931dee5c12677de9ea24b3b75a1943	Catalyst 14.4 pack1, legacy branch
+14-4-xp32-64-dd-ccc-pack2.exe	mirror	b72542f2666cea514566b3644ae0d8d7612723bc	015149eb57e927ecc8f2431a717132d69ff9fecbcb9cd66fd5e4f26d43191438	Catalyst 14.4 pack2; display INF byte-identical to the vendor copy
+14-4-xp32-64-dd-ccc-pack3.exe	mirror	cff3995f367c57443f1c831828de5f04d71cfa7d	d081568289128b704b8f902d675cd85c767fd617111a524080784a145a0fb6b8	Catalyst 14.4 pack3, the only stock GFX7 x64 driver
+9-3_xp64_dd_ccc_enu.exe	mirror	ff419542a47c51fa8f91aa9c2db5d1d91c8d3f31	046c43d096428b34d45725ebeacab5378a04b0990f30819a73aff38065045d84	Catalyst 9.3 x64, closes the early end of the lineage
+icafe-winxp-9.00.300.3010-beta1-br294594-sep24.exe	mirror	62c5ae5ba8a776ec6392fb58da3bccd885faeb37	97a63ffb39d0ad6730304225e7967fdef972220e99264680ea88d400262ac03b	iCafe 3010 beta, 32-bit only; internal name shows br294594-sep24
+icafe-100.50-xp64-9.00.300.3005.exe	wayback		dfd2d3ee994300a6442c3a3fc4c9380dd91ce417eea41e4eeae119b9b9fb4375	iCafe 100.50; richest GFX7 donor at 17 ids; AMD's own file at www2.ati.com/drivers/windows-xp-amd-catalyst-9.00.300.3005-dec9.exe, captured 20150525015957 and 20150510011138, byte-identical, refetched and reverified after a reboot lost the scratch tree
+AX2PXFPP_EN.iso	archive	3654d895e36c8fa1ade9b088ae04da86f3c20a6c	45807eceef84c6c29920efd4294f0bdb127e602465a7a0e4e579148c69e459a8	Windows XP Professional x64 Retail SP1A; SHA1 8e914f652dff0aa8fd16f41b583817c7e107bba5 matches the published canonical hash
+14-4-win7-win8-win8.1-64-dd-ccc-whql.exe	operator		e99b480c9f84db095e43c48c8ca307b16aa9244118e1ee4c222f8414ec0ba6b2	Catalyst 14.4 desktop Win7/8/8.1 x64; the donor package (WB_INF/B171094)
+14-4-win7-win8-win8.1-32-dd-ccc-whql.exe	operator		902d6ac52d943676740d73e6e4c918186f87f36f7c9866268ac1429a54634eba	Catalyst 14.4 desktop Win7/8/8.1 x32 sibling
+10-2_legacy_xp32-64_dd_ccc.exe	mirror	aaa1a2773f37ec05bfe567f69d17df2c14453604	c7bcb8c02579314f2bc5b38337141574faf2b21f0ed4e99e4d278fd438b2ef43	Catalyst 10.2 legacy, multi-arch
+12-4_xp64_dd_ccc.exe	mirror	9fe44a04078b12aed58e35a1af5260cd3b1b7ae4	9499d5077f528b955ab1d8621a7d830fbbb2d753e9f2e0b8c3bc58f6319843a6	Catalyst 12.4 x64
+12-4_agp-hotfix_xp64_dd_ccc.exe	mirror	d48fd4709b8b816fd52b376fc9e24c7c182b051b	62e8ab83c690faf76054feba756145cef25275c8b6cfcea64f19e4a40ec23d33	Catalyst 12.4 AGP hotfix x64
+12-6-legacy_xp64_dd_ccc_whql.exe	mirror	662858d84fa48c6933dfad34c257d87ddbcbbd92	edd038231c1e5753cfc583a12cebd3504196f13e2ee69b85db3b48b4181d2aed	Catalyst 12.6 legacy x64
+12-8_xp64_dd_ccc.exe	mirror	46be7a105fe017edbec1dd274f9a8119d23bc632	595f9fa318e59561af101acf44986239f778c315239ed2fbab537e8d8ef26208	Catalyst 12.8 x64
+13-9_xp64_dd_ccc_whql.exe	mirror	73c2ae614ed58ae01f851ad3fe6c75fd2e3c577f	ee0994d03be174b2051cb489558f4aec91e9b9b3b771009395ff9d08c5870f6f	Catalyst 13.9 x64, last before the line froze
+14-4-xp32-64-dd-ccc-pack1.exe	mirror	bffe8b94b757f3d2a048fed05ef84ce90f68abc5	76f8b5db65d36c8da84111fd55301f6dfb931dee5c12677de9ea24b3b75a1943	Catalyst 14.4 pack1, legacy branch
+14-4-xp32-64-dd-ccc-pack2.exe	mirror	b72542f2666cea514566b3644ae0d8d7612723bc	015149eb57e927ecc8f2431a717132d69ff9fecbcb9cd66fd5e4f26d43191438	Catalyst 14.4 pack2; display INF byte-identical to the vendor copy
+14-4-xp32-64-dd-ccc-pack3.exe	mirror	cff3995f367c57443f1c831828de5f04d71cfa7d	d081568289128b704b8f902d675cd85c767fd617111a524080784a145a0fb6b8	Catalyst 14.4 pack3, the only stock GFX7 x64 driver
+9-3_xp64_dd_ccc_enu.exe	mirror	ff419542a47c51fa8f91aa9c2db5d1d91c8d3f31	046c43d096428b34d45725ebeacab5378a04b0990f30819a73aff38065045d84	Catalyst 9.3 x64, closes the early end of the lineage
+icafe-winxp-9.00.300.3010-beta1-br294594-sep24.exe	mirror	62c5ae5ba8a776ec6392fb58da3bccd885faeb37	97a63ffb39d0ad6730304225e7967fdef972220e99264680ea88d400262ac03b	iCafe 3010 beta, 32-bit only; internal name shows br294594-sep24
+icafe-100.50-xp64-9.00.300.3005.exe	wayback		dfd2d3ee994300a6442c3a3fc4c9380dd91ce417eea41e4eeae119b9b9fb4375	iCafe 100.50; richest GFX7 donor at 17 ids; AMD's own file at www2.ati.com/drivers/windows-xp-amd-catalyst-9.00.300.3005-dec9.exe, captured 20150525015957 and 20150510011138, byte-identical, refetched and reverified after a reboot lost the scratch tree
+14-4-win7-win8-win8.1-64-dd-ccc-whql.exe	operator		e99b480c9f84db095e43c48c8ca307b16aa9244118e1ee4c222f8414ec0ba6b2	Catalyst 14.4 desktop Win7/8/8.1 x64; the donor package (WB_INF/B171094)
+14-4-win7-win8-win8.1-32-dd-ccc-whql.exe	operator		902d6ac52d943676740d73e6e4c918186f87f36f7c9866268ac1429a54634eba	Catalyst 14.4 desktop Win7/8/8.1 x32 sibling
